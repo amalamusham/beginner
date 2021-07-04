@@ -1,0 +1,26 @@
+for( var i=0;i<4;i++){  
+
+             //when we run the program setTimeout function is 
+             //stored in other memory location,the var variable is in the global scope
+    //for loop goes on and when i=4 it stops as its conditon gets false 
+    //and now the value of i will be 4 and now the setTimeout callback function
+    //runs and i references to same memory location of i which is 4 
+    //so for each iteration it prints the value of 4 4times.
+    
+setTimeout(() => {
+        console.log(i);
+    });
+};
+
+for(let i=0;i<4;i++){
+
+//but in this case let is block scope variable
+    //for each iteration it refers to the new value of i and it prints 0  1
+    // 2  and 3 as output 
+    
+setTimeout(() => {
+        console.log(i);
+    });
+};
+
+
